@@ -8,6 +8,7 @@ from tqdm import tqdm
 client = language_v2.LanguageServiceClient()
 
 pheme = pd.read_csv('datasets\pheme2.csv')
+twitter = pd.read_csv('datasets\\twitter2.csv')
 
 def classify(text, verbose=True):
     """Classify the input text into categories."""
@@ -53,9 +54,10 @@ def parse_table(table):
     print(f"Categorized {len(table)} entries")
     return results
 
-write_file = "pheme_categories.json"
-parse_table(pheme["text"])
-
+write_file = "twitter_categories.json"
+parse_table(twitter["text"])
+#print(twitter["text"].iloc[385])
+#parse_table(twitter["text"].iloc[385:387])
 
 """
 # The text to analyze
