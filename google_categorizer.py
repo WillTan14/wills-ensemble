@@ -38,7 +38,7 @@ def classify(text, verbose=True):
 
     return result
 
-def parse_table(table):
+def parse_table(table, write_file):
     results = {}
     entry_number = 0
     for text in tqdm(table):
@@ -54,8 +54,8 @@ def parse_table(table):
     print(f"Categorized {len(table)} entries")
     return results
 
-write_file = "twitter_categories.json"
-parse_table(twitter["text"])
+parse_table(pheme["text"], "pheme_categories.json")
+parse_table(twitter["text"], "twitter_categories.json")
 #print(twitter["text"].iloc[385])
 #parse_table(twitter["text"].iloc[385:387])
 
