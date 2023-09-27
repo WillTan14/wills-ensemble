@@ -9,6 +9,7 @@ client = language_v2.LanguageServiceClient()
 
 pheme = pd.read_csv('datasets\pheme2.csv')
 twitter = pd.read_csv('datasets\\twitter2.csv')
+weibo = pd.read_csv('datasets\\weibo.csv')
 
 def classify(text, verbose=True):
     """Classify the input text into categories."""
@@ -54,8 +55,9 @@ def parse_table(table, write_file):
     print(f"Categorized {len(table)} entries")
     return results
 
-parse_table(pheme["text"], "pheme_categories.json")
-parse_table(twitter["text"], "twitter_categories.json")
+#parse_table(pheme["text"], "pheme_categories.json")
+#parse_table(twitter["text"], "twitter_categories.json")
+parse_table(weibo["text"], "weibo_categories.json")
 #print(twitter["text"].iloc[385])
 #parse_table(twitter["text"].iloc[385:387])
 
