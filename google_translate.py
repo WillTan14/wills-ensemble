@@ -24,4 +24,3 @@ def translate_text(target: str, text: str) -> dict:
     return result
 
 
-r 
