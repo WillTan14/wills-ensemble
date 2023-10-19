@@ -9,3 +9,7 @@ Requires python>3.8, create the environment with requirements.txt file
 
 Need to install the glove twitter pre-trained embeddings from https://nlp.stanford.edu/projects/glove/, then place the files in a folder named "glove".  
 Create a directory named "spacy-twitter", then use the command `python -m spacy init vectors en glove\glove.twitter.27B.200d.txt spacy-twitter` to allow spacy to use the dataset.
+
+Run model_optimizer.ipynb to get a set of optimized parameters for a confidence/size configuration
+
+Paste those parameters into d_weight_voting.ipynb, then run the notebook with the corresponding confidence/size configuration to get results
